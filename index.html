@@ -14,14 +14,15 @@
   <div id="map"></div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    const map = L.map('map').setView([42.306, -1.964], 16);
+    const map = L.map('map').setView([42.306, -1.964], 15);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    const catedral = [42.3065, -1.9618];
-    const elRaso = [42.3054, -1.9676];
+    // Coordenadas corregidas
+    const catedral = [42.308155, -1.961517];
+    const elRaso = [42.303866, -1.966299];
 
     L.marker(catedral).addTo(map).bindPopup("Catedral de Santa María").openPopup();
     L.marker(elRaso).addTo(map).bindPopup("El Raso");
@@ -45,3 +46,4 @@
   </script>
 </body>
 </html>
+
